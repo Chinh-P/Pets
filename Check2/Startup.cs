@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using Check2.Models;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Check2
 {
@@ -30,6 +31,13 @@ namespace Check2
 
             services.AddDbContext<CheckContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("CheckContext")));
+
+            services.AddMvc();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +49,13 @@ namespace Check2
             }
 
             app.UseMvc();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Pet API V1");
+            });
         }
     }
 }
