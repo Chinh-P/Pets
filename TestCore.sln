@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Check2", "Check2\Check2.csproj", "{184A8162-61B3-4295-BE27-0AFCFC9A4FB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Check2", "Check2\Check2.csproj", "{184A8162-61B3-4295-BE27-0AFCFC9A4FB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{5EDDEE83-DBBC-45EB-8FB7-ECF709FE2E54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{184A8162-61B3-4295-BE27-0AFCFC9A4FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{184A8162-61B3-4295-BE27-0AFCFC9A4FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{184A8162-61B3-4295-BE27-0AFCFC9A4FB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EDDEE83-DBBC-45EB-8FB7-ECF709FE2E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EDDEE83-DBBC-45EB-8FB7-ECF709FE2E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EDDEE83-DBBC-45EB-8FB7-ECF709FE2E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EDDEE83-DBBC-45EB-8FB7-ECF709FE2E54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

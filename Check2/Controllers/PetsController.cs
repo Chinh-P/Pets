@@ -8,8 +8,10 @@ using Microsoft.EntityFrameworkCore;
 using Check2.Models;
 using TestCore.Model;
 
+//[assembly:ApiConventionType(typeof(DefaultApiConvention))]
 namespace Check2.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class PetsController : ControllerBase

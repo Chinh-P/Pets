@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="NSwag.MSBuild" Version="11.20.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+<Target Name="NSwag" BeforeTargets="Build">
+    <!--<Exec Command="$(NSwagExe) aspnetcore2swagger /assembly:$(OutDir)/MyWebAssembly.dll /output:swagger.json" />-->
+    <Exec Command="$(NSwagExe) jsonschema2csclient /input:pets-swagger.json /output:PetsClient.cs /InjectHttpClient:true /namespace:$(RootNamespace) /UseBaseUrl:false" />
+</Target>
+</Project>
