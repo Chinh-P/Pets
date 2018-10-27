@@ -12,8 +12,5 @@
     </PackageReference>
   </ItemGroup>
 
-<Target Name="NSwag" BeforeTargets="Build">
-    <!--<Exec Command="$(NSwagExe) aspnetcore2swagger /assembly:$(OutDir)/MyWebAssembly.dll /output:swagger.json" />-->
-    <Exec Command="$(NSwagExe) jsonschema2csclient /input:pets-swagger.json /output:PetsClient.cs /InjectHttpClient:true /namespace:$(RootNamespace) /UseBaseUrl:false" />
-</Target>
+
 </Project>
